@@ -1,0 +1,62 @@
+
+ 
+ h1{
+    text-align: center;
+    color: #1171df;
+    background-color: rgb(131, 135, 190);
+    margin-top: 20 px;
+}
+
+.intro {
+    color:rgb(157, 43, 148);
+    font-style: italic;
+    text-align: center;
+    font-size:x-large;
+}
+
+
+
+table {
+    background-color: #ccc;
+}
+tr {
+    background-color: #ebdfdf;
+}
+
+img{
+    border-radius: 10%;
+    position: absolute;
+    right: 0;
+    width: 30%;
+}
+
+h2{
+    color: aqua;
+    font: size 100px;
+    font-weight: 300;
+   }
+   h3{
+    color: blue;
+   position: relative;
+   width: 200px;
+   }
+
+#corsi{
+    color:#1171df ;
+    font-size: 10px;
+}
+
+.sala{
+    width: 200px;
+}
+
+.piscina{
+    width: 200px;
+}
+
+#registrazione{
+    top: 200 px;
+    font-size: medium;    
+    white-space: nowrap;
+}
+
