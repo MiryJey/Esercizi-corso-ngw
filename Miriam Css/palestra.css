@@ -3,7 +3,26 @@
     background-color:#7BBAD5;
  }
 
- 
+
+ #logo{
+    background-color: #ced6d9;
+    width: 30;
+    height: 60;
+ }
+
+ .logoimm{
+    width: 200 px;
+ }
+
+ #paginaselezionata{
+    color: #1171df;
+ }
+
+ #contenitore{
+    border-top-style: solid;
+    border-top-width: 200px;
+             
+        }
 
  h1{
     text-align: center;
@@ -28,12 +47,9 @@ tr {
     background-color: #ebdfdf;
 }
 
-img{
-    border-radius: 10%;
-    position: absolute;
-    right: 0;
-    width: 30%;
-}
+
+
+
 
 h2{
     color: aqua;
