@@ -5,12 +5,12 @@
 
 
  #logo{
-    background-color: #ced6d9;
-    width: 30;
-    height: 60;
+  
+  
  }
 
  .logoimm{
+    margin-left: auto;
     width: 200 px;
  }
 
@@ -19,6 +19,7 @@
  }
 
  #contenitore{
+    margin-top: 100;
     border-top-style: solid;
     border-top-width: 200px;
              
