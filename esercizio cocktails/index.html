@@ -17,6 +17,38 @@
 
         <footer></footer>
         <script>
+        function crea_card_drink(lista_di_drink){
+           document.getElementById("sezione-drink").innerHTML = "";
+            for( let i = 0; i<lista_di_drink.length; i++){
+            let div = document.createElement('div');
+            
+            let hNomeCocktail = document.createElement('h3');
+            //nell'h3 appena creato, mette il strDrink
+            //strDrink è il nome del cocktail
+            //lista_di_drink[0].strDrink -> Gin Fizz
+            //lista_di_drink[1].strDrink ->Gin sour
+            hNomeCocktail.innerHTML = lista_di_drink[i].strDrink;
+            
+            let imageCocktail = document.createElement('img');
+            imageCocktail.src = lista_di_drink[i].strDrinkThumb;
+            imageCocktail.width = 200;
+            imageCocktail.height = 200;
+
+
+            let instrCocktail = document.createElement('p');
+            instrCocktail.innerHTML = lista_di_drink[i].strInstructionsIT;
+            
+            div.appendChild(hNomeCocktail);
+            div.appendChild(imageCocktail);
+            div.appendChild(instrCocktail);
+
+            document.getElementById("sezione-drink").appendChild(div);
+
+        }}
+
+
+
+
         //www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
         //funzioni asincrone sono funzioni che aspettano
@@ -27,12 +59,17 @@
             let risposta = await fetch(
                `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input}`
             );
-            let risposta_json =  await risposta.json();
-            console.log(risposta_json);
+            let lista_drink =  await risposta.json();
+            console.log(lista_drink.drinks);
             
-        }
-
-        //funzione normale:
+            if(lista_drink.drinks != null){
+            crea_card_drink(lista_drink.drinks);
+            }else{
+                //gestione errore, nessun risultato e null
+                console.log("nessun risultato trovato");
+            }
+            }
+                //funzione normale:
         //function richiesta(){
             //richiesta al server di instagram per ricevere post 'fetch'
           //  let risposta = fetch(
