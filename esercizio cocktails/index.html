@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>FETCH </h1>
+          <!--  <button onclick = "richiesta()">Connettiti</button> -->
+            <button onclick = "richiesta_async()">Connetti async</button>
+        <!--Per tutta la lunghezza della lista di oggetti cocktails creami una html e incollamela
+        dentro questa sezione...quindi stampa su schermo-->
+            <section id = "sezione-drink"></section>
+        </main>
+
+        <footer></footer>
+        <script>
+        //www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+        //funzioni asincrone sono funzioni che aspettano
+        //che un istruzione si compia
+        // fetch serve per la richiesta
+        async function richiesta_async() {
+            let input = prompt("Quale drink vuoi cercare?");
+            let risposta = await fetch(
+               `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input}`
+            );
+            let risposta_json =  await risposta.json();
+            console.log(risposta_json);
+            
+        }
+
+        //funzione normale:
+        //function richiesta(){
+            //richiesta al server di instagram per ricevere post 'fetch'
+          //  let risposta = fetch(
+          //     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+            //);
+         //   console.log(risposta);
+       // };
+
+        </script>
+    
+    </body>
+</html>
