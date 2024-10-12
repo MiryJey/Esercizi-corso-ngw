@@ -1,0 +1,13 @@
+#bitcoin #inner {
+    display: flex;
+}
+
+#bitcoin #inner .value{
+    background-color: #ECE4B7;
+    text-align: center;
+    border: solid 2px #5763dc;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    
+}

@@ -1,0 +1,27 @@
+.counter{
+    margin-bottom: 70PX;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+}
+
+
+.counter h1{
+    font-size: 50px;
+}
+
+
+.counter.btns{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    ;
+}
