@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <!--cosi blocco l'accesso -->
+        <script>
+        if(localStorage.getItem("utente")== null){
+            window.location.href = index.html;
+        }
+        </script>
+        
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Dash</h1>
+            <h2>Benvenuto <span id = "nome-utente" > X </span></h2>
+            <button onclick = "logout_to_index()"> Logout</button>
+
+        </main>
+
+        <footer></footer>
+        <script>
+         
+
+            function logout_to_index(){
+                localStorage.removeItem("utente");
+                window.location.href = "index.html";
+            }
+            //localStore per prendere un valore salvato in una chiave si usa 
+            // getItem
+            //string to dizionario
+           let utente = JSON.parse(localStorage.getItem("utente"));
+           
+           document.getElementById("nome-utente").innerHTML = utente.username + "" + utente.password;
+         
+
+
+
+        </script>
+    
+    </body>
+</html>

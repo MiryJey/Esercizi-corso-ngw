@@ -1,0 +1,57 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Codice esempio</h1>
+        </main>
+
+        <footer></footer>
+        <script>
+            const banca = {
+                nome : "Banca d'italia", //nome
+                valore : 1000, //valore in euro della banca
+                //lista clienti
+                lista_clienti : ['andrea','nicolo','simone','gianluca'],
+                //stampa dei clienti
+                stampaClienti : function(){
+                    for(let i = 0; i<this.lista_clienti.length; i++){
+                        console.log(this.lista_clienti[i]);
+                    }
+                },
+                rateizzazione: function(){
+                    return this.valore / 12;
+                },
+                
+            };
+
+            //metodi di stampa
+            //dot-notation
+            console.log(banca.nome);
+            //per richiamare una funzione
+            banca.stampaClienti();
+            //stampaClienti ha già la stampa all'interno quindi
+            //meglio non richiamarlo
+            let ale = banca.rateizzazione()
+            console.log(ale);
+
+            //metodi diretti di modifica
+            banca["nuovo campo"] = "nuovo valore";
+            console.log(banca);
+            //modifica campo
+            banca["valore"] = 2000;
+            //delete cancella campo
+            delete banca["nome"];
+            console.log(banca);
+
+
+
+        </script>
+    
+    </body>
+</html>
+    
